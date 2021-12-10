@@ -16,6 +16,11 @@ export default class ListItem extends Component {
           <Text style={styles.text}> {this.props.data.key} </Text>
           <Text style={styles.textSm}> {this.props.data.value} </Text>
         </View>
+        <MyButton
+          style={styles.button}
+          pressFunc={() => this.props.data.func(this.props.data.id)}
+          text={"DELETE"}
+        ></MyButton>
       </View>
     );
   }
@@ -32,11 +37,11 @@ const styles = StyleSheet.create({
   },
   text: {
     color: "#fff",
-    fontSize: 20,
+    fontSize: 15,
   },
   textSm: {
     color: "#ddd",
-    fontSize: 15,
+    fontSize: 14,
   },
   flatitem: {
     color: "#fff",
@@ -45,5 +50,9 @@ const styles = StyleSheet.create({
     width: 50,
     height: 50,
     marginRight: 5,
+  },
+  button: {
+    marginLeft: "auto",
+    justifyContent: "center",
   },
 });
