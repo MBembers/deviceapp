@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Text, TouchableOpacity, View } from "react-native";
+import PropTypes from "prop-types";
 
 export default class MyButton extends Component {
   constructor(props) {
